@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Paraíso</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Oswald:wght@200..700&family=Pacifico&family=Playwrite+DK+Loopet:wght@100..400&family=Poetsen+One&family=Share+Tech&family=Tagesschrift&family=Underdog&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="icon" type="image/png" href="ruta-de-vuelo.png">
+  
+</head>
+<body>
+  <header>
+    <div class="slider">
+      <img src="5474e3d7.jpg" alt="Hotel 1" class="active">
+      <img src="Anax-Resort-Spa-Luxury-Beach-Front-Suite-4.jpg" alt="Hotel 2">
+      <img src="TAL-header-exterior-waldorf-astoria-riviera-maya-WARIVIERAMAYA0425-4782bd6fab2d4ebe9cf90384c11109b5.jpg" alt="Hotel 3">
+    </div>
+    <h1 class="titulo">Bienvenido a Hotel Paraíso</h1>
+    <div id="banner-animado">Disfruta de tus vacaciones soñadas</div>
+  </header>
+
+  <div class="contenedor">
+    <div class="columna">
+      <h2>Destinos</h2>
+      <p>París, la ciudad del amor, ofrece monumentos icónicos, exquisita gastronomía y un ambiente inolvidable que enamora a cada visitante.</p>
+      <img src="Mejores-hoteles-en-Cancun-Hard-Rock-Hotel-Cancun.png" alt="">
+    </div>
+
+    <div class="columna">
+      <h2>Experiencias</h2>
+      <p>Las Maldivas son el destino perfecto para quienes buscan playas paradisíacas, aguas cristalinas y una experiencia de relajación total.</p>
+      <img src="servicios-hotel-xxss.jpg" alt="">
+    </div>
+
+    <div class="columna">
+      <h2>Regístrate</h2>
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit">Registrarse</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+  <p>© 2025 Hotel Paraíso</p> 
+  <p>Dirección: Belizario Suarez SJM, Ciudad Lima</p>
+  <div class="iconos">
+    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <span>|</span>
+    <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+    <span>|</span>
+    <a href="https://x.com/" target="_blank"><i class="fab fa-x-twitter"></i></a>
+  </div>
+</footer>
+
+
+  
+  <script>
+  
+    setInterval(() => {
+      const banner = document.getElementById('banner-animado');
+      banner.style.opacity = '0';
+      setTimeout(() => {
+        banner.style.opacity = '1';
+      }, 500);
+    }, 4000);
+
+   
+    const imagenes = document.querySelectorAll('.slider img');
+    let index = 0;
+
+    setInterval(() => {
+      imagenes[index].classList.remove('active');
+      index = (index + 1) % imagenes.length;
+      imagenes[index].classList.add('active');
+    }, 3000);
+  </script>
+</body>
+</html>
